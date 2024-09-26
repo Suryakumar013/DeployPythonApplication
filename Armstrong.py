@@ -1,18 +1,16 @@
-def is_armstrong(number):
+def is_armstrong_number(num):
     # Convert the number to string to easily iterate over digits
-    digits = str(number)
-    num_digits = len(digits)
-    
+    str_num = str(num)
+    # Get the number of digits
+    num_digits = len(str_num)
     # Calculate the sum of the digits raised to the power of num_digits
-armstrong_sum = sum(int(digit) ** num_digits for digit in digits)
-    
-    # Check if the calculated sum is equal to the original number
-    return armstrong_sum == number
+    sum_of_powers = sum(int(digit) ** num_digits for digit in str_num)
+    # Check if the sum is equal to the original number
+    return sum_of_powers == num
 
-# Input from the user
-num = int(input("Enter a number: "))
-
-if is_armstrong(num):
-    print(f"{num} is an Armstrong number.")
+# Example usage
+number = int(input("Enter a number: "))
+if is_armstrong_number(number):
+    print(f"{number} is an Armstrong number.")
 else:
-    print(f"{num} is not an Armstrong number.")
+    print(f"{number} is not an Armstrong number.")
