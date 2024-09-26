@@ -9,8 +9,8 @@ def is_armstrong_number(num):
     return sum_of_powers == num
 
 # Example usage
-number = int(input("Enter a number: "))
-if is_armstrong_number(number):
-    print(f"{number} is an Armstrong number.")
-else:
-    print(f"{number} is not an Armstrong number.")
+    number = int(input("Enter a number: "))
+    if is_armstrong_number(number):
+      print(f"{number} is an Armstrong number.")
+    else:
+      print(f"{number} is not an Armstrong number.")
